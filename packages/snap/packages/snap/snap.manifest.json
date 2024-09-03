@@ -1,0 +1,50 @@
+{
+  "version": "0.1.10",
+  "description": "Bring privacy back with @cypher-lab",
+  "proposedName": "StealthScape",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elli610/StealthScape.git"
+  },
+  "source": {
+    "shasum": "XJnAWIMSIr6YQ03j9ZfyFSlbdhmgFXuHqur+WOIM6LM=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "packageName": "stealth-scape",
+        "registry": "https://registry.npmjs.org/",
+        "iconPath": "images/icon.svg"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_manageState": {},
+    "snap_dialog": {},
+    "endowment:rpc": {
+      "dapps": true,
+      "snaps": true
+    },
+    "endowment:network-access": {},
+    "snap_getBip44Entropy": [
+      {
+        "coinType": 1
+      }
+    ],
+    "endowment:page-home": {},
+    "endowment:cronjob": {
+      "jobs": [
+        {
+          "expression": "* * * * *",
+          "request": {
+            "method": "retrieveUtxos",
+            "params": {}
+          }
+        }
+      ]
+    },
+    "endowment:lifecycle-hooks": {},
+    "endowment:transaction-insight": {},
+    "snap_getLocale": {}
+  },
+  "manifestVersion": "0.1"
+}
