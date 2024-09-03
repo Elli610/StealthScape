@@ -6,44 +6,30 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: "0.8.16",
-  defaultNetwork: "mumbai",
+  defaultNetwork: "rootstock_testnet",
   networks: {
-    mumbai: {
-      url: process.env.MUMBAI_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    sepolia: {
-      url: process.env.SEPOLIA_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    xdctestnet: { // Note the quotes around xdc-testnet
-      url: process.env.XDC_TESTNET_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    auroratestnet: {
-      url: process.env.AURORA_TESTNET_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    zircuit : {
-      url: process.env.ZIRCUIT_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    rootstock_testnet: {
+      url: process.env.ROOTSTOCK_TESTNET_RPC_URL || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
     hedera: {
-      url: process.env.HEDERA_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url: "https://testnet.hashio.io/api",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    linea: {
-      url: process.env.LINEA_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+
+    kinto_testnet: {
+      url: process.env.KINTO_TESTNET_RPC || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    oasis: {
-      url: process.env.OASIS_RPC_URL || "",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+
+    morph_testnet: {
+      url: "https://rpc-quicknode-holesky.morphl2.io",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    
-  },
-  etherscan: {
-    apiKey: process.env.MUMBAI_API_KEY || "",
   },
 };
 
