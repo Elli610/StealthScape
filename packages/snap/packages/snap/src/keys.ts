@@ -4,7 +4,7 @@ import { keccak256 } from "./utils";
 
 export const locale = (async () => await snap.request({ method: 'snap_getLocale' }));
 
-export const api = "";
+export const api = "http://localhost:8000";
 
 export const G = (new Curve(CurveName.SECP256K1)).GtoPoint();
 export const H = G.mult(123n); // NOT SECURE. DO NOT USE IN PRODUCTION

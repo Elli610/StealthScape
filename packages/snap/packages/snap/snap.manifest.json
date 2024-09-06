@@ -1,5 +1,5 @@
 {
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Bring privacy back with @cypher-lab",
   "proposedName": "StealthScape",
   "repository": {
@@ -7,11 +7,11 @@
     "url": "https://github.com/Elli610/StealthScape.git"
   },
   "source": {
-    "shasum": "XJnAWIMSIr6YQ03j9ZfyFSlbdhmgFXuHqur+WOIM6LM=",
+    "shasum": "R2uSokRLctYuPQe1m6Qo903woHoWxf3cveEXeXNAX0g=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
-        "packageName": "stealth-scape",
+        "packageName": "stealthscape-snap",
         "registry": "https://registry.npmjs.org/",
         "iconPath": "images/icon.svg"
       }
