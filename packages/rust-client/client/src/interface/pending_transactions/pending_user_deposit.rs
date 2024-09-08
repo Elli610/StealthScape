@@ -27,7 +27,7 @@ impl PendingUserDepositTx {
     ) -> Result<PendingUserDepositTx, Box<dyn std::error::Error>> {
         let client = reqwest::Client::new();
         let res = client
-            .post("http://127.0.0.1:3001/api/generateCommitment")
+            .post("http://127.0.0.1:8001/api/generateCommitment")
             // Assuming the API expects a structured JSON object
             .json(&serde_json::json!({ "amount": event.amount }))
             .send()
