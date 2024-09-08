@@ -32,7 +32,7 @@ Blockchain technology has revolutionized transparency and security in digital tr
 
 ### Blockchain Compatibility
 - **Cross-Chain Functionality**: Any evm chain could be integrated with StealthScape. We only need to deploy the smart contract on the target chain and start listening to it.
-- 
+  
 #### Supported chains:
 - **Morph**: [0x121f32fc1bfc852f872ad6611a8e613e430a27fb](https://explorer-holesky.morphl2.io/address/0x121F32fC1BFC852F872ad6611a8E613e430A27Fb)
 - **Hedera**: [0x121f32fc1bfc852f872ad6611a8e613e430a27fb](https://hashscan.io/testnet/contract/0.0.4812588)
