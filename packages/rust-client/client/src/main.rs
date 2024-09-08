@@ -66,21 +66,21 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let notify = Arc::new(Notify::new());
 
     // first we try to sync with the network
-    let validator: Vec<Validator> = [Validator {
-        node: Node {
-            ip: "176.146.201.74".to_string(),
-            port: "8000".to_string(),
-            status: "".to_string(),
-        },
-        pubkey: "".to_string(),
-        last_block_hash: "".to_string(),
-        last_block_number: 0,
-    }]
-    .to_vec();
-    let _ = insert_validator(validator);
-    let _ = sync_with_network().await?;
-    print!("synced with network");
-
+    /*let validator: Vec<Validator> = [Validator {
+            node: Node {
+                ip: "176.146.201.74".to_string(),
+                port: "8000".to_string(),
+                status: "".to_string(),
+            },
+            pubkey: "".to_string(),
+            last_block_hash: "".to_string(),
+            last_block_number: 0,
+        }]
+        .to_vec();
+        let _ = insert_validator(validator);
+        let _ = sync_with_network().await?;
+        print!("synced with network");
+    */
     // Spawn the listener in a separate async task
     for config in networks {
         let node_url = config.node_url;

@@ -52,7 +52,6 @@ const Navbar: React.FC<NavbarProps> = ({ logo }) => {
         <Link to="/" style={{ display: "flex", alignItems: "center" }}>
           <img src={logo} alt="StealthScape" style={logoStyles} />
         </Link>
-        <Typography>Stleath chain</Typography>
         <Box
           sx={{ display: "flex", gap: theme.spacing(2), alignItems: "center" }}
         >
@@ -76,4 +75,3 @@ const Navbar: React.FC<NavbarProps> = ({ logo }) => {
 };
 
 export default Navbar;
-
