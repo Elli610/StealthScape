@@ -69,7 +69,7 @@ pub async fn handle_user_ringct(payload: Json<PendingRingCT>) -> Result<Response
 
     let client = reqwest::Client::new();
     let res = client
-        .post("http://127.0.0.1:3001/api/verifyTx")
+        .post("http://127.0.0.1:8001/api/verifyTx")
         .json(&verify_tx)
         .send()
         .await;
